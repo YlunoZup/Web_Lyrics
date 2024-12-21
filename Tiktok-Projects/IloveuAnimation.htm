@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You Animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #FFCA74;
+            font-family: arial;
+        }
+        span {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #664390;
+            text-transform: uppercase;
+            letter-spacing: 1rem;
+            font-size: 2rem;
+            border-left: 3px solid white;
+            border-right: 3px solid white;
+            padding: 1rem;
+            padding-right: 0rem;
+            font-weight: 600;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 21rem;
+            animation: largeur 5s infinite;
+        }
+        .small {
+            position: absolute;
+            right: 45%;
+            width: 0;
+            overflow: hidden;
+            animation: showSmall 5s infinite;
+        }
+        .u {
+            right: 5%;
+        }
+        .big {
+            animation: showBig 5s infinite;
+        }
+        .fa {
+            color: red;
+        }
+        @keyframes showSmall {
+            0% {
+                width: 0;
+            }
+            20% {
+                width: 0rem;
+                opacity: 1;
+            }
+            22% {
+                width: 2rem;
+                opacity: 1;
+            }
+            70% {
+                width: 2rem;
+                opacity: 1;
+            }
+            90% {
+                width: 2rem;
+                opacity: 1;
+            }
+            92% {
+                width: 0rem;
+                opacity: 0;
+            }
+        }
+        @keyframes showBig {
+            0% {
+            }
+            19% {
+                opacity: 1;
+            }
+            25% {
+                opacity: 0;
+                width: 0;
+            }
+            90% {
+                opacity: 0;
+                width: 0;
+            }
+            100% {
+                opacity: 1;
+                width: 100%;
+            }
+        }
+        @keyframes largeur {
+            0% {
+                width: 21rem;
+                letter-spacing: 1rem;
+            }
+            50% {
+                letter-spacing: 0rem;
+            }
+            90% {
+                width: 6.5rem;
+                letter-spacing: 0rem;
+            }
+            100% {
+                width: 21rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>I</span>
+        <span class="big">Love</span>
+        <span class="small fa fa-heart"></span>
+        <span class="big">You</span>
+        <span class="small u">U</span>
+    </div>
+</body>
+</html>
