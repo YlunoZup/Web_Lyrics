@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Button with Animation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: #1e1e2f;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #eaeaea;
+    }
+
+    .open-modal {
+      background: none;
+      color: #eaeaea;
+      border: 2px solid #3b82f6;
+      padding: 12px 24px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      animation: pulse 2s infinite;
+    }
+
+    .open-modal span {
+      position: relative;
+      z-index: 2;
+    }
+
+    .open-modal::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 200%;
+      height: 100%;
+      background: linear-gradient(90deg, #3b82f6, #9333ea, #3b82f6);
+      z-index: 1;
+      transition: all 0.4s ease;
+    }
+
+    .open-modal:hover {
+      color: #3b82f6;
+    }
+
+    .open-modal:hover::before {
+      left: 0;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 10px #3b82f6;
+      }
+      50% {
+        box-shadow: 0 0 20px #9333ea;
+      }
+      100% {
+        box-shadow: 0 0 10px #3b82f6;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <button class="open-modal"><span>Login</span></button>
+
+</body>
+</html>
